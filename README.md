@@ -49,7 +49,7 @@ a data-driven narrative approach.
 
 ## Developed By
 
-Aleena Khan
-6th Semester
-Department of Information Technology
-University of Layyah
+Aleena Khan,
+6th Semester,
+Department of Information Technology,
+University of Layyah.
