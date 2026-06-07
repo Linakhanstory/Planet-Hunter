@@ -2,7 +2,7 @@
 
 Using AI to Find the Stars That Could Be Home.
 
-## About the App
+## About the Project
 
 Planet Hunter is an immersive, science-fiction interactive web application that integrates Machine Learning 
 with user experience design to classify celestial bodies. Acting as the core intelligence framework for a 
