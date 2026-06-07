@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="halo" cx="45%" cy="40%" r="70%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.35" stop-color="#dff6ff" stop-opacity="0.85"/>
+      <stop offset="0.65" stop-color="#7be9ff" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="core" cx="38%" cy="34%" r="58%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.4" stop-color="#f5fdff"/>
+      <stop offset="0.7" stop-color="#b7f3ff"/>
+      <stop offset="1" stop-color="#2f4aa7"/>
+    </radialGradient>
+    <filter id="glow" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="12" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.85 0" />
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="spark" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="s"/>
+      <feMerge>
+        <feMergeNode in="s"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" fill="none"/>
+  <circle cx="256" cy="256" r="205" fill="url(#halo)" filter="url(#glow)"/>
+  <circle cx="256" cy="256" r="118" fill="url(#core)"/>
+
+  <!-- subtle limb shading -->
+  <circle cx="256" cy="256" r="118" fill="#000" opacity="0.12"/>
+  <circle cx="238" cy="235" r="52" fill="#fff" opacity="0.20"/>
+
+  <!-- crystalline spark streaks -->
+  <g opacity="0.70" filter="url(#spark)">
+    <path d="M256 132 L260 210 L252 210 Z" fill="#ffffff" opacity="0.35"/>
+    <path d="M330 178 L292 238 L300 242 Z" fill="#dff6ff" opacity="0.28"/>
+    <path d="M198 300 L240 274 L244 282 Z" fill="#b7f3ff" opacity="0.22"/>
+  </g>
+</svg>
+

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="45%" r="75%">
+      <stop offset="0" stop-color="#fff2e8" stop-opacity="0.9"/>
+      <stop offset="0.32" stop-color="#ffb68a" stop-opacity="0.55"/>
+      <stop offset="0.65" stop-color="#a56bff" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="core" cx="40%" cy="36%" r="62%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.35" stop-color="#ffe2cf"/>
+      <stop offset="0.7" stop-color="#ff8a6a"/>
+      <stop offset="1" stop-color="#3a0b18"/>
+    </radialGradient>
+    <filter id="glow" x="-55%" y="-55%" width="210%" height="210%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.78 0" />
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" fill="none"/>
+  <circle cx="256" cy="256" r="225" fill="url(#halo)" filter="url(#glow)"/>
+  <circle cx="256" cy="256" r="150" fill="url(#core)"/>
+  <circle cx="225" cy="225" r="55" fill="#ffffff" opacity="0.14"/>
+  <g opacity="0.12">
+    <path d="M110 305 C150 265, 220 240, 290 252 C365 266, 405 300, 430 335"
+          stroke="#ffb68a" stroke-width="22" stroke-linecap="round" fill="none"/>
+    <path d="M130 205 C190 155, 260 150, 320 175 C390 205, 400 250, 385 275"
+          stroke="#a56bff" stroke-width="18" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>
+
